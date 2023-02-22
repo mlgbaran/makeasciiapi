@@ -6,8 +6,8 @@ __pycache__/
 # C extensions
 *.so
 
-
-
+lib
+*.zip
 #CUSTOM
 tryouts.py
 
