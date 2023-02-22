@@ -5,10 +5,9 @@ from pydantic import BaseModel
 from fastapi import FastAPI
 from io import BytesIO
 import math
+from mangum import Mangum
 
 # python -m uvicorn working:app --reload
-
-print("baran")
 
 
 class Rq(BaseModel):
@@ -110,6 +109,7 @@ def makeascii(im, scaleFactor=0.3, blackwhite=False):
 
 
 app = FastAPI()
+handler = Mangum(app)
 
 
 @app.get("/")
